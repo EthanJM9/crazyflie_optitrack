@@ -8,7 +8,8 @@ if __name__ == '__main__':
     rospy.init_node('publish_pose', anonymous=True)
     worldFrame = rospy.get_param("~worldFrame", "/world")
     name = rospy.get_param("~name")
-    r = rospy.get_param("~rate")
+    r = rospy.get_param("~rate")  
+    # the ~ preceeding the params means that they're private values (set internally by another file)
     x = rospy.get_param("~x")
     y = rospy.get_param("~y")
     z = rospy.get_param("~z")
@@ -33,5 +34,5 @@ if __name__ == '__main__':
     while not rospy.is_shutdown():
         msg.header.seq += 1
         msg.header.stamp = rospy.Time.now()
-        pub.publish(msg)
+        pub.publish(msg)  # publishes the msg to ROSnodes that contains desired position for hover 
         rate.sleep()
