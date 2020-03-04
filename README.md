@@ -3,6 +3,8 @@
 crazyflie_ros
 =============
 
+Test test test!
+
 ROS stack for Bitcraze Crazyflie (http://www.bitcraze.se/), with the following features:
 
 * Support for Crazyflie 1.0 and Crazyflie 2.0 (using stock firmware)
